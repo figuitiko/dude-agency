@@ -1,0 +1,251 @@
+//session news-letter
+section{
+  padding: 2rem 8rem;
+  @include media-max-width($break-points-tablet){
+    padding: 2rem 1rem;
+  }
+}
+#news-letter{
+
+  background-color: $main-color;
+  .news-heading{
+    text-align: left;
+    h2{
+      font-size: 1.3rem;
+      color: $text-color;
+      margin-left: 0.5rem;
+    }
+  }
+  .news-form{
+    padding: 0;
+    .form-inline{
+
+      .news-form-group{
+        display: flex;
+        flex-flow: column wrap;
+        flex: 0 0 auto;
+        align-items: flex-start;
+        padding: 0 10px;
+
+        label{
+          color: $text-color;
+        }
+        input{
+           border-radius: 0;
+        }
+        button{
+          border-radius: 0;
+          background: #1D4AC7 0% 0% no-repeat padding-box;
+        }
+      }
+    }
+  }
+
+
+}
+
+#about{
+  background: url("../img/about-section.png") center center;
+  background-size: cover;
+  .about-main-heading{
+    hr{
+     @include section-hr()
+
+
+    }
+
+    @include section-heading($dark-heading)
+  }
+  .about-main-content{
+
+    @include  section-content($dark-heading)
+  }
+}
+#services{
+  background: url('../img/services.png') 0% 0% no-repeat padding-box;
+  background-size: cover;
+  .services-main-heading{
+    hr{
+      @include section-hr()
+
+
+    }
+    @include section-heading($text-color)
+
+  }
+  .services-main-content{
+    @include section-content($text-color)
+  }
+}
+#howToWork{
+  background: $text-color;
+  .howToWork-heading{
+    hr{
+      @include section-hr();
+      margin-inline-start: auto;
+    }
+    @include section-heading($dark-heading)
+  }
+  .howToWork-steps{
+    justify-content: center;
+    display: flex;
+    flex-flow: wrap row;
+    gap: 1rem;
+
+    .howToWork-steps__box{
+        display: flex;
+      flex-flow: column;
+      align-items: center;
+      .howToWork-steps__box-content{
+        height:380px;
+        width: 180px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 57px #2D2D2D33;
+        opacity: 1;
+        display: flex;
+
+        align-items: center;
+        padding: 1rem;
+
+
+        flex-flow: column;
+        h4{
+          margin-top: 1rem;
+          font-size: 1rem;
+        }
+        p{
+          font-size: 0.8rem;
+          line-height: 1.2;
+          margin-top: 1rem;
+        }
+        button{
+          font-size: 0.7rem;
+        }
+      }
+
+
+     .box-bottom{
+       width: 0;
+       height: 0;
+       border-left: 20px solid transparent;
+       border-right: 20px solid transparent;
+       border-top: 35px solid white;
+       @include media-max-width(1220px){
+         display: none;
+       }
+     }
+
+    }
+
+  }
+  .howToWork-steps_chart{
+    figure{
+      margin-top: 1rem;
+      text-align: center;
+      @include media-max-width(1220px){
+        display: none;
+      }
+      img{
+        width: 90%;
+        max-width: 870px;
+      }
+    }
+  }
+}
+
+#facts{
+  background: url('../img/facts.png') 0% 0% no-repeat padding-box;
+  background-size: cover;
+  .facts-heading{
+    hr{
+      @include section-hr()
+
+
+    }
+    @include section-heading($text-color);
+    small{
+      color:$text-color;
+    }
+  }
+  .facts-heading__two{
+    display: flex;
+    gap: 2rem;
+    .facts-heading__two-box{
+      h4{
+        color: $text-color;
+        font-size: 2rem;
+        margin-bottom: -0.5rem;
+
+      }
+    small{
+      color: $text-color;
+
+    }
+    }
+
+  }
+  .facts-content{
+    @include  section-content($text-color)
+  }
+}
+
+#contact{
+   background: $text-color;
+  .contact-heading{
+    hr{
+      @include section-hr();
+      margin-inline-start: auto;
+    }
+    @include section-heading($dark-heading)
+  }
+  .contact-locations{
+    .contact-location_box{
+      display: flex;
+      justify-self: center;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      img{
+        object-fit: contain;
+      }
+      a{
+        color: $dark-heading;
+        &:hover{
+          color: $main-color;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .contact-form{
+    form{
+      label{
+        color:$contact-label-color;
+      }
+      .call-action{
+        padding: 0.4rem 2rem;
+      }
+
+      .contact-form__calendar{
+        @include media-max-width($break-points-tablet){
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+
+        }
+      }
+    }
+    padding: 0;
+    .contact-input{
+      border-radius: 0;
+    }
+    .contact-textarea__wrapper{
+      margin-top: 0rem;
+    }
+  }
+}

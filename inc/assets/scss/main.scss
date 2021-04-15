@@ -1,0 +1,181 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "home";
+
+@font-face {
+  font-family: Rene_Bieder_Milliard_Semibold;
+  src: url('../font/Rene_Bieder_Milliard_SemiBold.woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: Rene_Bieder_Milliard_Medium;
+  src: url('../font/Rene_Bieder_Milliard_Medium.woff');
+  font-weight: normal;
+}
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+html,body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  outline: none;
+  display: block;
+  font-family: Rene_Bieder_Milliard_Medium, sans-serif;
+
+}
+
+//general
+
+.call-action{
+  color: $text-color;
+  background-color: $main-color;
+}
+.learn-more{
+  border-color: $main-color;
+  color: $main-color;
+  &:hover{
+    color: $text-color;
+  }
+}
+.navbar-dark .navbar-toggler{
+  border: 1px solid white;
+}
+
+//-----header--
+
+header{
+  width: 100%;
+  background: url("../img/header-bg.png") center center;
+  background-size: cover;
+  padding: 2rem 0 8rem 0;
+
+  nav{
+    .nav-link{
+      color: $text-color!important;
+      font-size: 0.9rem;
+      @include media-max-width(1120px){
+        font-size: 0.6rem;
+      }
+      @include media-max-width($break-points-tablet-big){
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .main-logo{
+    width: 50%;
+    @include media-max-width($break-points-tablet){
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    figure{
+      img{
+
+        width: 282px;
+
+      }
+    }
+  }
+  .header-content{
+    color: $text-color;
+
+    h1{
+      text-shadow: 0px 0px 10px #2D2D2DAB;
+      opacity: 1;
+      @include  media-max-width($break-points-tablet){
+        font-size: 2rem;
+      }
+      @include media-max-width($break-points-mobile-big){
+        font-size: 1.5rem;
+      }
+      @include media-max-width(400px){
+        font-size: 1.2rem;
+      }
+    }
+    small{
+      text-shadow: 0px 0px 10px #2D2D2DAB;
+      opacity: 1;
+      @include media-max-width(400px){
+        font-size: 70%;
+      }
+    }
+    .header-content__buttons{
+      @include media-max-width($break-points-mobile-big){
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+    }
+
+  }
+}
+
+//footer
+
+footer{
+  background: #1F1F1F 0% 0% no-repeat padding-box;
+  padding: 1rem 4rem 2rem 4rem;
+  @include media-max-width($break-points-mobile-big){
+  padding: 0;
+    text-align: center;
+  }
+  .footer-logo{
+
+    img{
+      width:262px;
+    }
+  }
+  .footer-social{
+    img{
+      width: 48px;
+    }
+  }
+  .footer-menu-one{
+    @include  footer-nav();
+    @include media-max-width($break-points-tablet){
+      flex-flow: wrap column;
+      align-items: flex-start;
+
+      li{
+        a{
+          border: none;
+        }
+      }
+    }
+  }
+  h2{
+    color: $secondary-color;
+    opacity: 1;
+  }
+  small{
+    color: $third-color;
+    opacity: 1;
+    margin-top: -0.7rem;
+  }
+  p{
+
+    color: $text-color;
+  }
+  .footer-menu-two{
+    @include  footer-nav();
+    li {
+      a{
+        font-size: 0.8rem;
+        padding: 0 0.2rem;
+      }
+    }
+  }
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+  border: 1px solid $main-color;
+  background: lightblue;
+  color: deepskyblue;
+}

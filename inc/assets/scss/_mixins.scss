@@ -1,0 +1,66 @@
+@import "_variables.scss";
+
+@mixin footer-nav(){
+  color: $text-color;
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  justify-content: center;
+
+  li{
+
+
+    text-align: center;
+    a{
+      color: $text-color;
+      border-left: 1px solid $text-color;
+      padding: 0 0.4rem;
+      &:hover{
+        text-decoration: none;
+        color: $main-color;
+      }
+    }
+  }
+  li:first-child{
+    a{
+      border-left: none;
+    }
+
+  }
+}
+@mixin section-heading($color){
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  h2{
+    color: $color;
+    font-size: 2.5rem;
+
+  }
+}
+@mixin section-content($color){
+  margin-top:1rem;
+  margin-bottom: 4rem;
+  p{
+    margin: 0 0.4rem;
+    color: $color;
+  }
+}
+@mixin section-hr(){
+  width: 100px;
+  height: 14px;
+  background: transparent linear-gradient(90deg, #03BBFF 0%, #38D5DB 100%) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  align-self: flex-start;
+  margin-inline-start: 0;
+}
+
+@mixin media-min-width($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+@mixin media-max-width($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
