@@ -1,7 +1,9 @@
 (function ($) {
     $(document).ready(function () {
-        console.log(custom_params)
+
         $('#calendar').datepicker();
+       console.log( $('#calendar').val());
+       console.log(new Date().toDateString('/'));
         $('#subscribers').submit(function (event) {
             var name = '';
             var email = '';
@@ -60,6 +62,7 @@
                            confirmButtonText: 'ok'
                        })
                    }
+                    resetSubscriber();
 
                     // here we will handle errors and validation messages
                 });
@@ -85,7 +88,7 @@
                     confirmButtonText: 'ok'
                 })
             }
-            if($('#contactName').val()){
+            if($('#contactEmail').val()){
                 contactEmail = $('#contactEmail').val()
             }else{
                 Swal.fire({
@@ -165,7 +168,7 @@
                             confirmButtonText: 'ok'
                         })
                     }
-
+                    resetContactData();
                     // here we will handle errors and validation messages
                 });
 
@@ -173,7 +176,18 @@
             event.preventDefault();
         })
 
-
+       function resetSubscriber() {
+            console.log("i am here");
+           $('#staticName').val('');
+           $('#staticEmail2').val('');
+       }
+       function resetContactData() {
+           $('#contactName').val('');
+           $('#contactEmail').val('');
+           $('#phone').val('');
+           $('#msg').val('');
+           $('#calendar').val(new Date.toString());
+       }
 
     })
 })(jQuery)
