@@ -153,7 +153,7 @@
                     if(data.ok){
                         Swal.fire({
                             title: 'success!',
-                            text: "you are subscribed",
+                            text: "Sooner we'll contact you",
                             icon: 'success',
                             confirmButtonText: 'ok'
                         })
