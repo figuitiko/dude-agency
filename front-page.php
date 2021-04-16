@@ -9,15 +9,16 @@ get_header();
             <h2>JOIN OUR NEWSLETTER AND BE AMONG THE FIRST FINANCIAL ADVISORS TO HEAR ABOUT PROVEN MARKETING STRATEGIES TO BRING HUGE RETURNS FOR YOUR BUSINESS</h2>
         </div>
         <div class="col-md-12 news-form">
-            <form class="form-inline col-md-12">
+            <form id="subscribers" class="form-inline col-md-12">
                 <div class="mb-2 news-form-group col-md-4">
                     <label for="staticEmail2" >Name</label>
-                    <input type="text"  class="form-control w-100" id="staticName" value="" autocomplete="off" >
+                    <input type="text"  class="form-control w-100" id="staticName" value="" autocomplete="off" required >
                 </div>
                 <div class="mb-2 news-form-group col-md-4">
                     <label for="staticEmail2" >Email</label>
-                    <input type="text"  class="form-control w-100" id="staticEmail2" value="" autocomplete="off" >
+                    <input type="email"  class="form-control w-100" id="staticEmail2" value="" autocomplete="off"  required>
                 </div>
+
                 <div class="mb-2 news-form-group col-md-4">
 
                     <button type="submit" class="btn btn-primary mt-4 w-100">Yes, Join For Free Now</button>
@@ -193,24 +194,25 @@ get_header();
 
         </div>
         <div class="col-md-12  contact-form">
-            <form class="w-100 row mt-5 justify-content-center" >
+            <form id="contact_form" class="w-100 row mt-5 justify-content-center" >
                 <div class="col-md-9 row contact-form_group1">
                     <div class="col-md-4">
-                        <label for="name">Name:</label>
-                        <input id="name" type="text" class="contact-input form-control"/>
+                        <label for="contactName">Name:</label>
+                        <input id="contactName" type="text" class="contact-input form-control" required/>
                     </div>
                     <div class="col-md-4">
-                        <label for="email">Email:</label>
-                        <input id="email" type="email" class="contact-input form-control"/>
+                        <label for="contactEmail">Email:</label>
+                        <input id="contactEmail" type="email" class="contact-input form-control" required/>
                     </div>
                     <div class="col-md-4">
                         <label for="phone">Phone:</label>
-                        <input id="phone" type="text" class="contact-input form-control"/>
+                        <input id="phone" type="text" class="contact-input form-control" required/>
                     </div>
                     <div class="col-md-12 contact-textarea__wrapper">
                         <label for="msg">Message:</label>
-                        <textarea class="form-control contact-input contact-textarea"></textarea>
+                        <textarea id="msg" class="form-control contact-input contact-textarea" required></textarea>
                     </div>
+
 
                 </div>
 
@@ -226,7 +228,7 @@ get_header();
                     <button class="btn call-action">Schedule A Free Call</button>
                 </div>
 
-
+                <?php wp_nonce_field('contact') ?>
             </form>
         </div>
     </div>

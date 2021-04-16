@@ -138,11 +138,20 @@ class MainScripts
             'ver' => THEME_VERSION,
             'in_footer' => true
         );
-        $scripts['custom-js'] = array (
-            'src' => $js_path.'/custom.js',
+        $scripts['sweetAlert2'] = array (
+            'src' => 'https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.all.min.js',
             'deps' => array (),
             'ver' => THEME_VERSION,
             'in_footer' => true
+        );
+        $scripts['custom'] = array (
+            'src' => $js_path.'/custom.js',
+            'deps' => array (),
+            'ver' => THEME_VERSION,
+            'in_footer' => true,
+            'localize'=>array(
+                'wp_rest'=> wp_create_nonce('wp_rest')
+            )
         );
 
 

@@ -18,6 +18,10 @@ class MainClass
     }
     private function includeFiles(){
         include_once ('MainScripts.php');
+        include_once ('cpt-subscribers/SubscribersCpt.php');
+        include_once ('cpt-contacts/ContactsCpt.php');
+        include_once ('api-rest/SubscribersRest.php');
+        include_once ('api-rest/ContactRest.php');
 
     }
     private function  defineConstants(){
