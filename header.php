@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,  user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <meta name="description" content="">
@@ -23,13 +23,13 @@
 <body>
 <div class="container-fluid p-0">
     <header id="header" class="d-flex flex-wrap">
-        <div class="main-logo col-md-6">
+        <div class="main-logo col-6">
             <figure>
                 <img src="<?php echo get_stylesheet_directory_uri().'/inc/assets/img/logo.png' ?>" alt="logo">
             </figure>
         </div>
-        <div class="row col-md-6 ">
-            <div class="col-md-12">
+
+            <div class=" col-6 navbar-container">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,7 @@
                     </div>
                 </nav>
             </div>
-        </div>
+
         <div class="header-content row justify-content-center align-items-center flex-column  w-100 mt-5">
 
                     <h1>Now They'll Know Who You Are</h1>

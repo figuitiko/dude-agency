@@ -144,6 +144,9 @@ class MainScripts
             'ver' => THEME_VERSION,
             'in_footer' => true
         );
+
+
+
         $scripts['custom'] = array (
             'src' => $js_path.'/custom.js',
             'deps' => array (),
@@ -181,6 +184,9 @@ class MainScripts
         ];
         $styles['jquery-ui-css'] = [
             'src' => 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css'
+        ];
+        $styles['font-awesome'] = [
+            'src' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'
         ];
         $styles['main'] = [
             'src' => $scss_path.'/main.css'

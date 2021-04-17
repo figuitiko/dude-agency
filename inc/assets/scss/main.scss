@@ -2,6 +2,7 @@
 @import "_mixins.scss";
 @import "home";
 
+
 @font-face {
   font-family: Rene_Bieder_Milliard_Semibold;
   src: url('../font/Rene_Bieder_Milliard_SemiBold.woff');
@@ -12,6 +13,7 @@
   src: url('../font/Rene_Bieder_Milliard_Medium.woff');
   font-weight: normal;
 }
+
 *, ::after, ::before {
   box-sizing: border-box;
 }
@@ -22,8 +24,10 @@ html,body
   margin: 0px;
   padding: 0px;
   border: none;
+
   outline: none;
   display: block;
+
   font-family: Rene_Bieder_Milliard_Medium, sans-serif;
 
 }
@@ -44,6 +48,25 @@ html,body
 .navbar-dark .navbar-toggler{
   border: 1px solid white;
 }
+.navbar-container{
+   @include media-max-width($break-points-tablet-big){
+     width: 50%;
+   }
+  .navbar{
+    @include media-max-width($break-points-tablet-big){
+      justify-content: flex-end;
+
+    }
+    .navbar-nav{
+      @include media-max-width($break-points-tablet-big){
+        background-color: $third-color;
+        text-align: center;
+        min-width: 155px;
+        padding-top: 0.1rem;
+      }
+    }
+  }
+}
 
 //-----header--
 
@@ -51,7 +74,10 @@ header{
   width: 100%;
   background: url("../img/header-bg.png") center center;
   background-size: cover;
-  padding: 2rem 0 8rem 0;
+  padding: 2rem 2rem 8rem 2rem;
+  @include media-max-width($break-points-mobile){
+    padding: 2rem 0.5rem 8rem 0.5rem;
+  }
 
   nav{
     .nav-link{
@@ -71,18 +97,25 @@ header{
     @include media-max-width($break-points-tablet){
       width: 100%;
       display: flex;
-      justify-content: center;
+
     }
     figure{
       img{
 
         width: 282px;
+        @include media-max-width($break-points-tablet){
+          width: 160px;
+        }
+        @include  media-max-width($break-points-mobile){
+          width: 100px;
+        }
 
       }
     }
   }
   .header-content{
     color: $text-color;
+    padding: 1rem;
 
     h1{
       text-shadow: 0px 0px 10px #2D2D2DAB;
@@ -95,6 +128,9 @@ header{
       }
       @include media-max-width(400px){
         font-size: 1.2rem;
+      }
+      @include media-max-width(320px){
+        font-size: 1rem;
       }
     }
     small{
@@ -128,9 +164,18 @@ footer{
   }
   .footer-logo{
 
-    img{
-      width:262px;
-    }
+
+      img{
+
+        width: 282px;
+        @include media-max-width($break-points-tablet){
+          width: 160px;
+        }
+        @include  media-max-width($break-points-mobile){
+          width: 100px;
+        }
+      }
+
   }
   .footer-social{
     img{
@@ -140,8 +185,8 @@ footer{
   .footer-menu-one{
     @include  footer-nav();
     @include media-max-width($break-points-tablet){
-      flex-flow: wrap column;
-      align-items: flex-start;
+      flex-flow: nowrap column;
+      padding: 0;
 
       li{
         a{
@@ -150,6 +195,7 @@ footer{
       }
     }
   }
+
   h2{
     color: $secondary-color;
     opacity: 1;
@@ -169,6 +215,16 @@ footer{
       a{
         font-size: 0.8rem;
         padding: 0 0.2rem;
+      }
+    }
+    @include media-max-width($break-points-tablet){
+
+      flex-wrap: wrap;
+      padding: 0;
+      li{
+        a{
+          border: none;
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 <?php
 ?>
 
-<footer class="pt-4 pt-md-5 border-top">
+<footer class="py-5 px-4 border-top">
     <div class="row justify-content-center flex-column align-items-center">
         <figure class="footer-logo">
             <img src="<?php echo get_stylesheet_directory_uri().'/inc/assets/img/logo.png' ?>">

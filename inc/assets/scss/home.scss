@@ -1,8 +1,16 @@
 //session news-letter
+
+//@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+@font-face {
+  font-family: FontAwesome;
+  src: url('../font/fontawesome-webfont.eot');
+  font-weight: normal;
+}
 section{
   padding: 2rem 8rem;
   @include media-max-width($break-points-tablet){
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
   }
 }
 #news-letter{
@@ -170,6 +178,7 @@ section{
   .facts-heading__two{
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
     .facts-heading__two-box{
       h4{
         color: $text-color;
@@ -204,6 +213,7 @@ section{
       justify-self: center;
       align-items: center;
       gap: 0.5rem;
+
       font-size: 0.8rem;
       img{
         object-fit: contain;
@@ -248,4 +258,55 @@ section{
       margin-top: 0rem;
     }
   }
+}
+#button {
+  display: inline-block;
+  background-color: $main-color;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  //border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s,
+  opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  padding-top: 8px;
+  i{
+    color: white;
+    margin: 0 auto;
+    font-size: 30px;
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: #333;
+    color: $third-color;
+    text-decoration: none;
+  }
+  &:active{
+    background-color: #555;
+  }
+@include media-max-width($break-points-tablet){
+    display: none;
+}
+}
+
+/*#button::after {
+  content: "\f077";
+  font-family:FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}*/
+
+
+#button.show {
+  opacity: 1;
+  visibility: visible;
 }

@@ -233,5 +233,5 @@ get_header();
         </div>
     </div>
 </section>
-
+<a id="button"><i class="fa fa-chevron-up" ></i></a>
 <?php get_footer()  ?>
